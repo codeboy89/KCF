@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "164060372399",
+    "firebase_url": "https://ftskcf-c9b4d.firebaseio.com",
+    "project_id": "ftskcf-c9b4d",
+    "storage_bucket": "ftskcf-c9b4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164060372399:android:a7576b9c886c664d",
+        "android_client_info": {
+          "package_name": "com.example.oilfi.kcf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164060372399-99kobf4b6hu09vlvntdhlrf2caj6ehod.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oilfi.kcf",
+            "certificate_hash": "d1ec93c9d7e1dceae766750ce5fed8391fc0aceb"
+          }
+        },
+        {
+          "client_id": "164060372399-h97qo14k8cpeank3arr6v0hkhusl63jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPtUeXhCFZn0wUUE0rvoJJDRUxnXQwtxw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164060372399-h97qo14k8cpeank3arr6v0hkhusl63jt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
