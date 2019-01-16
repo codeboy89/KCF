@@ -13,11 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class StationSelect extends AppCompatActivity implements View.OnClickListener {
-//private Spinner spinner;
-private Button continueButton;
+	//private Spinner spinner;
+	private Button continueButton;
 
     private ReadExcel readExcel;
-    private Pump_Audit pump_audit;
     private ArrayList<Pump_Audit> pumpArrayList;
     private ArrayList<String> unitList = new ArrayList<>();
     private ArrayList<String> stationList = new ArrayList<>();
@@ -26,41 +25,38 @@ private Button continueButton;
     private int station;
     private RecyclerView recyclerView;
     private StationAdapter adapter;
-
-    public  void setStation(int position) {
+	
+	public void setStation(int position) {
         this.station = position;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+	    //////Setting up Activity///////////////////////////////////////////////////////////////
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_station_select);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
+	    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+	    //////Receiving intent extras//////////////////////////////////////////////////////////
         Intent intent = getIntent();
         readExcel = intent.getParcelableExtra("ReadExcel");
         pumpArrayList = (ArrayList<Pump_Audit>) getIntent().getSerializableExtra("pump");
-    initList();
-
+	    //////Init Station List///////////////////////////////////////////////////////////////
+	    initList();
+	    //////Setting up buttton//////////////////////////////////////////////////////////////
         continueButton = findViewById(R.id.ContinueStation);
-      /*  spinner = findViewById(R.id.spinnerStation);
-
-        String[] stationArray = {"1", "2", "3", "4", "5", "6", "7"};
-        ArrayAdapter<String> stationSpinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, stationArray );
-        stationSpinnerArrayAdapter.setDropDownViewResource(R.layout.spinner);
-        spinner.setAdapter(stationSpinnerArrayAdapter);
-        */
         continueButton.setOnClickListener(this);
 
     }
-private void initList()
-{
-    for (int i = 1; i < pumpArrayList.size(); i++) {
-        unitList.add(pumpArrayList.get(i).getPUMP_NAME());
-        stationList.add(pumpArrayList.get(i).getSTATION());
-    }
-    initRecyclerView();
+	
+	private void initList() {
+		/////Adding pumps to list/////////////////////////////////////////////////////////////
+		for (int i = 1; i < pumpArrayList.size(); i++) {
+			unitList.add(pumpArrayList.get(i).getPumpName());
+			stationList.add(pumpArrayList.get(i).getStation());
+		}
+		/////initRecyclerView/////////////////////////////////////////////////////////////////
+		initRecyclerView();
     }
 
     private void initRecyclerView()
@@ -73,10 +69,12 @@ private void initList()
 
     @Override
     public void onClick(View v) {
+	    ///////Selected Station//////////////////////////////////////////////////////////////
         int station = adapter.getStationSelected() + 1;
-        Intent myIntent = new Intent(StationSelect.this , MainActivity.class);
+	    ///////Setting up Intent/////////////////////////////////////////////////////////////
+	    Intent myIntent = new Intent(StationSelect.this, MainActivity.class);
         myIntent.putExtra("Read_Excel", readExcel); //Optional parameters
-        myIntent.putExtra("pump",pumpArrayList);
+	    myIntent.putExtra("pump", pumpArrayList);
         myIntent.putExtra("station", station);
         startActivity(myIntent);
     }

@@ -9,183 +9,145 @@ package com.example.oilfi.kcf;
 import java.io.Serializable;
 
 /**
- *
  * @author oilfi
  */
-public class Pump_Audit implements Serializable
-{
-
-    private String PUMP_NAME = "53#-####";
-    private String PUMP_SERIAL_NUMBER = "########";
-    private String PUMP_PE_SERIAL_NUMBER = "########";
-    private String PUMP_FE_SERIAL_NUMBER = "########";
-    private String PUMP_FE_HOLE_NUMBER_1 = "0000####";
-    private String PUMP_FE_HOLE_NUMBER_5 = "0000####";
-    private String PUMP_PE_HOLE_NUMBER_1 = "0000####";
-    private String PUMP_PE_HOLE_NUMBER_5 = "0000####";
-    private String STATION = "#";
-    private String PSI = "##";
-    private String PSIGUAGE = "##";
-
-    public Pump_Audit()
-    {
+public class Pump_Audit implements Serializable {
+	
+	private String pumpName = "53#-####";
+	private String pumpSerialNumber = "########";
+	private String pumpPeSerialNumber = "########";
+	private String pumpFeSerialNumber = "########";
+	private String pumpFeHoleNumber1 = "0000####";
+	private String pumpFeHoleNumber5 = "0000####";
+	private String pumpPeHoleNumber1 = "0000####";
+	private String pumpPeHoleNumber5 = "0000####";
+	private String station = "#";
+	private String psi = "##";
+	private String psiguage = "##";
+	
+	public Pump_Audit() {
     }
-
-    public Pump_Audit( String PUMP_NAME ,
-            String PUMP_SERIAL_NUMBER ,
-            String PUMP_PE_SERIAL_NUMBER ,
-            String PUMP_FE_SERIAL_NUMBER ,
-            String PUMP_FE_HOLE_NUMBER_1 ,
-            String PUMP_FE_HOLE_NUMBER_5 ,
-            String PUMP_PE_HOLE_NUMBER_1 ,
-            String PUMP_PE_HOLE_NUMBER_5 ,
-            String STATION ,
-            String PSI ,
-            String PSIGUAGE )
-    {
-        this.PUMP_NAME = PUMP_NAME;
-        this.PUMP_FE_SERIAL_NUMBER = PUMP_SERIAL_NUMBER;
-        this.PUMP_PE_SERIAL_NUMBER = PUMP_PE_SERIAL_NUMBER;
-        this.PUMP_FE_SERIAL_NUMBER = PUMP_FE_SERIAL_NUMBER;
-        this.PUMP_FE_HOLE_NUMBER_1 = PUMP_FE_HOLE_NUMBER_1;
-        this.PUMP_FE_HOLE_NUMBER_5 = PUMP_FE_HOLE_NUMBER_5;
-        this.PUMP_PE_HOLE_NUMBER_1 = PUMP_PE_HOLE_NUMBER_1;
-        this.PUMP_PE_HOLE_NUMBER_5 = PUMP_PE_HOLE_NUMBER_5;
-        this.STATION = STATION;
-        this.PSI = PSI;
-        this.PSIGUAGE = PSIGUAGE;
+	
+	public Pump_Audit(String PUMP_NAME, String PUMP_SERIAL_NUMBER, String PUMP_PE_SERIAL_NUMBER, String PUMP_FE_SERIAL_NUMBER, String PUMP_FE_HOLE_NUMBER_1, String PUMP_FE_HOLE_NUMBER_5, String PUMP_PE_HOLE_NUMBER_1, String PUMP_PE_HOLE_NUMBER_5, String STATION, String PSI, String PSIGUAGE) {
+		this.pumpName = PUMP_NAME;
+		this.pumpFeSerialNumber = PUMP_SERIAL_NUMBER;
+		this.pumpPeSerialNumber = PUMP_PE_SERIAL_NUMBER;
+		this.pumpFeSerialNumber = PUMP_FE_SERIAL_NUMBER;
+		this.pumpFeHoleNumber1 = PUMP_FE_HOLE_NUMBER_1;
+		this.pumpFeHoleNumber5 = PUMP_FE_HOLE_NUMBER_5;
+		this.pumpPeHoleNumber1 = PUMP_PE_HOLE_NUMBER_1;
+		this.pumpPeHoleNumber5 = PUMP_PE_HOLE_NUMBER_5;
+		this.station = STATION;
+		this.psi = PSI;
+		this.psiguage = PSIGUAGE;
     }
 
     public Pump_Audit(Pump_Audit pump_audit) {
-        this.PUMP_NAME = pump_audit.getPUMP_NAME();
-        this.PUMP_FE_SERIAL_NUMBER = pump_audit.getPUMP_SERIAL_NUMBER();
-        this.PUMP_PE_SERIAL_NUMBER = pump_audit.getPUMP_PE_SERIAL_NUMBER();
-        this.PUMP_FE_SERIAL_NUMBER = pump_audit.getPUMP_FE_SERIAL_NUMBER();
-        this.PUMP_FE_HOLE_NUMBER_1 = pump_audit.getPUMP_FE_HOLE_NUMBER_1();
-        this.PUMP_FE_HOLE_NUMBER_5 = pump_audit.getPUMP_FE_HOLE_NUMBER_5();
-        this.PUMP_PE_HOLE_NUMBER_1 = pump_audit.getPUMP_PE_HOLE_NUMBER_1();
-        this.PUMP_PE_HOLE_NUMBER_5 = pump_audit.getPUMP_PE_HOLE_NUMBER_5();
-        this.STATION = pump_audit.getSTATION();
-        this.PSI = pump_audit.getPSI();
-        this.PSIGUAGE = pump_audit.getPSIGUAGE();
+	    this.pumpName = pump_audit.getPumpName();
+	    this.pumpFeSerialNumber = pump_audit.getPumpSerialNumber();
+	    this.pumpPeSerialNumber = pump_audit.getPumpPeSerialNumber();
+	    this.pumpFeSerialNumber = pump_audit.getPumpFeSerialNumber();
+	    this.pumpFeHoleNumber1 = pump_audit.getPumpFeHoleNumber1();
+	    this.pumpFeHoleNumber5 = pump_audit.getPumpFeHoleNumber5();
+	    this.pumpPeHoleNumber1 = pump_audit.getPumpPeHoleNumber1();
+	    this.pumpPeHoleNumber5 = pump_audit.getPumpPeHoleNumber5();
+	    this.station = pump_audit.getStation();
+	    this.psi = pump_audit.getPsi();
+	    this.psiguage = pump_audit.getPsiguage();
     }
-
-
-
-    public String getPUMP_NAME()
-    {
-        return PUMP_NAME;
+	
+	
+	public String getPumpName() {
+		return pumpName;
     }
-
-    public void setPUMP_NAME( String PUMP_NAME )
-    {
-        this.PUMP_NAME = PUMP_NAME;
+	
+	public void setPumpName(String pumpName) {
+		this.pumpName = pumpName;
     }
-
-    public String getPUMP_SERIAL_NUMBER()
-    {
-        return PUMP_SERIAL_NUMBER;
+	
+	public String getPumpSerialNumber() {
+		return pumpSerialNumber;
     }
-
-    public void setPUMP_SERIAL_NUMBER( String PUMP_SERIAL_NUMBER )
-    {
-        this.PUMP_SERIAL_NUMBER = PUMP_SERIAL_NUMBER;
+	
+	public void setPumpSerialNumber(String pumpSerialNumber) {
+		this.pumpSerialNumber = pumpSerialNumber;
     }
-
-    public String getPUMP_PE_SERIAL_NUMBER()
-    {
-        return PUMP_PE_SERIAL_NUMBER;
+	
+	public String getPumpPeSerialNumber() {
+		return pumpPeSerialNumber;
     }
-
-    public void setPUMP_PE_SERIAL_NUMBER( String PUMP_PE_SERIAL_NUMBER )
-    {
-        this.PUMP_PE_SERIAL_NUMBER = PUMP_PE_SERIAL_NUMBER;
+	
+	public void setPumpPeSerialNumber(String pumpPeSerialNumber) {
+		this.pumpPeSerialNumber = pumpPeSerialNumber;
     }
-
-    public String getPUMP_FE_SERIAL_NUMBER()
-    {
-        return PUMP_FE_SERIAL_NUMBER;
+	
+	public String getPumpFeSerialNumber() {
+		return pumpFeSerialNumber;
     }
-
-    public void setPUMP_FE_SERIAL_NUMBER( String PUMP_FE_SERIAL_NUMBER )
-    {
-        this.PUMP_FE_SERIAL_NUMBER = PUMP_FE_SERIAL_NUMBER;
+	
+	public void setPumpFeSerialNumber(String pumpFeSerialNumber) {
+		this.pumpFeSerialNumber = pumpFeSerialNumber;
     }
-
-    public String getPUMP_FE_HOLE_NUMBER_1()
-    {
-        return PUMP_FE_HOLE_NUMBER_1;
+	
+	public String getPumpFeHoleNumber1() {
+		return pumpFeHoleNumber1;
     }
-
-    public void setPUMP_FE_HOLE_NUMBER_1( String PUMP_FE_HOLE_NUMBER_1 )
-    {
-        this.PUMP_FE_HOLE_NUMBER_1 = PUMP_FE_HOLE_NUMBER_1;
+	
+	public void setPumpFeHoleNumber1(String pumpFeHoleNumber1) {
+		this.pumpFeHoleNumber1 = pumpFeHoleNumber1;
     }
-
-    public String getPUMP_FE_HOLE_NUMBER_5()
-    {
-        return PUMP_FE_HOLE_NUMBER_5;
+	
+	public String getPumpFeHoleNumber5() {
+		return pumpFeHoleNumber5;
     }
-
-    public void setPUMP_FE_HOLE_NUMBER_5( String PUMP_FE_HOLE_NUMBER_5 )
-    {
-        this.PUMP_FE_HOLE_NUMBER_5 = PUMP_FE_HOLE_NUMBER_5;
+	
+	public void setPumpFeHoleNumber5(String pumpFeHoleNumber5) {
+		this.pumpFeHoleNumber5 = pumpFeHoleNumber5;
     }
-
-    public String getPUMP_PE_HOLE_NUMBER_1()
-    {
-        return PUMP_PE_HOLE_NUMBER_1;
+	
+	public String getPumpPeHoleNumber1() {
+		return pumpPeHoleNumber1;
     }
-
-    public void setPUMP_PE_HOLE_NUMBER_1( String PUMP_PE_HOLE_NUMBER_1 )
-    {
-        this.PUMP_PE_HOLE_NUMBER_1 = PUMP_PE_HOLE_NUMBER_1;
+	
+	public void setPumpPeHoleNumber1(String pumpPeHoleNumber1) {
+		this.pumpPeHoleNumber1 = pumpPeHoleNumber1;
     }
-
-    public String getPUMP_PE_HOLE_NUMBER_5()
-    {
-        return PUMP_PE_HOLE_NUMBER_5;
+	
+	public String getPumpPeHoleNumber5() {
+		return pumpPeHoleNumber5;
     }
-
-    public void setPUMP_PE_HOLE_NUMBER_5( String PUMP_PE_HOLE_NUMBER_5 )
-    {
-        this.PUMP_PE_HOLE_NUMBER_5 = PUMP_PE_HOLE_NUMBER_5;
+	
+	public void setPumpPeHoleNumber5(String pumpPeHoleNumber5) {
+		this.pumpPeHoleNumber5 = pumpPeHoleNumber5;
     }
-
-    public String getSTATION()
-    {
-        return STATION;
+	
+	public String getStation() {
+		return station;
     }
-
-    public void setSTATION( String STATION )
-    {
-        this.STATION = STATION;
+	
+	public void setStation(String station) {
+		this.station = station;
     }
-
-    public String getPSI()
-    {
-        return PSI;
+	
+	public String getPsi() {
+		return psi;
     }
-
-    public void setPSI( String PSI )
-    {
-        this.PSI = PSI;
+	
+	public void setPsi(String psi) {
+		this.psi = psi;
     }
-
-    public String getPSIGUAGE()
-    {
-        return PSIGUAGE;
+	
+	public String getPsiguage() {
+		return psiguage;
     }
-
-    public void setPSIGUAGE( String PSIGUAGE )
-    {
-        this.PSIGUAGE = PSIGUAGE;
+	
+	public void setPsiguage(String psiguage) {
+		this.psiguage = psiguage;
     }
 
     @Override
-    public String toString()
-    {
-        return "Pump_Audit{" + "PUMP_NAME=" + PUMP_NAME + ", PUMP_SERIAL_NUMBER=" + PUMP_SERIAL_NUMBER + ", PUMP_PE_SERIAL_NUMBER=" + PUMP_PE_SERIAL_NUMBER + ", PUMP_FE_SERIAL_NUMBER=" + PUMP_FE_SERIAL_NUMBER + ", PUMP_FE_HOLE_NUMBER_1=" + PUMP_FE_HOLE_NUMBER_1 + ", PUMP_FE_HOLE_NUMBER_5=" + PUMP_FE_HOLE_NUMBER_5 + ", PUMP_PE_HOLE_NUMBER_1=" + PUMP_PE_HOLE_NUMBER_1 + ", PUMP_PE_HOLE_NUMBER_5=" + PUMP_PE_HOLE_NUMBER_5 + ", STATION=" + STATION + ", PSI=" + PSI + ", PSIGUAGE=" + PSIGUAGE + '}';
+    public String toString() {
+	    return "Pump_Audit{" + "pumpName=" + pumpName + ", pumpSerialNumber=" + pumpSerialNumber + ", pumpPeSerialNumber=" + pumpPeSerialNumber + ", pumpFeSerialNumber=" + pumpFeSerialNumber + ", pumpFeHoleNumber1=" + pumpFeHoleNumber1 + ", pumpFeHoleNumber5=" + pumpFeHoleNumber5 + ", pumpPeHoleNumber1=" + pumpPeHoleNumber1 + ", pumpPeHoleNumber5=" + pumpPeHoleNumber5 + ", station=" + station + ", psi=" + psi + ", psiguage=" + psiguage + '}';
     }
 
 }

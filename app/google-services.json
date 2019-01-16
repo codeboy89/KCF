@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "164060372399",
-    "firebase_url": "https://ftskcf-c9b4d.firebaseio.com",
-    "project_id": "ftskcf-c9b4d",
-    "storage_bucket": "ftskcf-c9b4d.appspot.com"
+    "project_number": "1075375824952",
+    "firebase_url": "https://kcf-ftsi.firebaseio.com",
+    "project_id": "kcf-ftsi",
+    "storage_bucket": "kcf-ftsi.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:164060372399:android:a7576b9c886c664d",
+        "mobilesdk_app_id": "1:1075375824952:android:a7576b9c886c664d",
         "android_client_info": {
           "package_name": "com.example.oilfi.kcf"
         }
       },
       "oauth_client": [
         {
-          "client_id": "164060372399-99kobf4b6hu09vlvntdhlrf2caj6ehod.apps.googleusercontent.com",
+          "client_id": "1075375824952-gdqt910dhrtep9tmjl6h9j8c6qrjoo7q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.oilfi.kcf",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "164060372399-h97qo14k8cpeank3arr6v0hkhusl63jt.apps.googleusercontent.com",
+          "client_id": "1075375824952-2ndr01ud90r2vo104enlbj0no855ulhk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAPtUeXhCFZn0wUUE0rvoJJDRUxnXQwtxw"
+          "current_key": "AIzaSyAeiVQLmHkWLOlGr6ugv1ZXnTAaTPlIEDc"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "164060372399-h97qo14k8cpeank3arr6v0hkhusl63jt.apps.googleusercontent.com",
+              "client_id": "1075375824952-2ndr01ud90r2vo104enlbj0no855ulhk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

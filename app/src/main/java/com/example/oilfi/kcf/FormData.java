@@ -1,7 +1,7 @@
 package com.example.oilfi.kcf;
 
 public class FormData {
-    
+
     private String Unit;
     private String Powerend;
     private String Fluidend;
@@ -20,6 +20,18 @@ public class FormData {
     public FormData(String unit) {
         Unit = unit;
     }
+    
+    public FormData(String unit, String powerend, String fluidend, String powerendHole1, String powerendHole5, String fluidendHole1, String fluidendHole5, boolean dampenerPSI, boolean dampenerPressureGuage) {
+        Unit = unit;
+        Powerend = powerend;
+        Fluidend = fluidend;
+        PowerendHole1 = powerendHole1;
+        PowerendHole5 = powerendHole5;
+        FluidendHole1 = fluidendHole1;
+        FluidendHole5 = fluidendHole5;
+        DampenerPSI = dampenerPSI;
+        DampenerPressureGuage = dampenerPressureGuage;
+    }
 
     @Override
     public String toString() {
@@ -35,19 +47,6 @@ public class FormData {
                 ", DampenerPressureGuage=" + DampenerPressureGuage +
                 '}';
     }
-
-    public FormData(String unit, String powerend, String fluidend, String powerendHole1, String powerendHole5, String fluidendHole1, String fluidendHole5, boolean dampenerPSI, boolean dampenerPressureGuage) {
-        Unit = unit;
-        Powerend = powerend;
-        Fluidend = fluidend;
-        PowerendHole1 = powerendHole1;
-        PowerendHole5 = powerendHole5;
-        FluidendHole1 = fluidendHole1;
-        FluidendHole5 = fluidendHole5;
-        DampenerPSI = dampenerPSI;
-        DampenerPressureGuage = dampenerPressureGuage;
-    }
-
 
     public String getUnit() {
         return Unit;
@@ -120,7 +119,6 @@ public class FormData {
     public void setDampenerPressureGuage(boolean dampenerPressureGuage) {
         DampenerPressureGuage = dampenerPressureGuage;
     }
-
 
 
 }

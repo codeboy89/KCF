@@ -1,3 +1,5 @@
+import com.google.gms.googleservices.GoogleServicesPlugin
+
 apply plugin: 'com.android.application'
 
 android {
@@ -26,23 +28,25 @@ android {
 dependencies {
     //noinspection GradleCompatible
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.google.firebase:firebase-messaging:12.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
-    implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
     implementation 'com.google.firebase:firebase-ml-vision:18.0.2'
     implementation 'com.google.firebase:firebase-auth:16.1.0'
     implementation 'com.google.firebase:firebase-firestore:17.1.5'
-    implementation 'com.google.firebase:firebase-database:16.0.2'
+    implementation 'com.google.firebase:firebase-database:16.0.5'
     implementation 'com.github.SUPERCILEX.poi-android:poi:3.17'
     implementation 'com.github.jaiselrahman:FilePicker:1.1.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
     implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha3'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation files('libs/com.fasterxml.jackson.core.jar')
+    implementation files('libs/com.fasterxml.jackson.databind.jar')
+    implementation files('libs/jackson-annotations-2.1.2.jar')
 }
 apply plugin: 'com.google.gms.google-services'
-com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+GoogleServicesPlugin.config.disableVersionCheck = true

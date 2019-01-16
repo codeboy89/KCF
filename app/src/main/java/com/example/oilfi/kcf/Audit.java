@@ -1,196 +1,165 @@
-
 package com.example.oilfi.kcf;
 
 import java.util.ArrayList;
 
-class Audit
-{
-
-    private String LOCATION = "######";
-    private String DISTRICT_NAME = "####";
-    private String FLEET_NAME = "####";
-    private String ROTATION = "####";
-    private String SHIFT = "####";
-    private String AUDIT_TYPE = "####";
-    private String USER = "####";
-    private String DATE = "####";
-    private String TIME = "####";
-    private String DATAVAN = "53DCT-####";
-    private String BASE_STATION = "####";
-    private String REPEATER = "####";
-    private String SPARE_BATTERIES = "0";
-
-    public String getSTATION() {
-        return STATION;
+class Audit {
+	
+	private String location = "######";
+	private String districtName = "####";
+	private String fleetName = "####";
+	private String rotation = "####";
+	private String shift = "####";
+	private String auditType = "####";
+	private String user = "####";
+	private String date = "####";
+	private String time = "####";
+	private String datavan = "53DCT-####";
+	private String baseStation = "####";
+	private String repeater = "####";
+	private String spareBatteries = "0";
+	private String station = "0";
+	private ArrayList<String> damageSensorsList;
+	private ArrayList<String> spareSensorsList;
+	private ArrayList<Pump_Audit> pumpArrayList;
+	
+	public Audit() {
+    
     }
-
-    public void setSTATION(String STATION) {
-        this.STATION = STATION;
+	
+	public String getLocation() {
+		return location;
     }
-
-    private String STATION = "0";
-    private ArrayList<String> DAMAGE_SENSOR_LIST;
-    private ArrayList<String> SPARE_SENSOR_LIST;
-
-    public Audit()
-    {
-
+	
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	
+	public String getDistrictName() {
+		return districtName;
+	}
+	
+	public void setDistrictName(String districtName) {
+		this.districtName = districtName;
     }
-
-    public String getLOCATION()
-    {
-        return LOCATION;
+	
+	public String getFleetName() {
+		return fleetName;
     }
-
-    public void setLOCATION( String LOCATION )
-    {
-        this.LOCATION = LOCATION;
+	
+	public void setFleetName(String fleetName) {
+		this.fleetName = fleetName;
     }
-
-    public String getDISTRICT_NAME()
-    {
-        return DISTRICT_NAME;
+	
+	public String getRotation() {
+		return rotation;
     }
-
-    public void setDISTRICT_NAME( String DISTRICT_NAME )
-    {
-        this.DISTRICT_NAME = DISTRICT_NAME;
+	
+	public void setRotation(String rotation) {
+		this.rotation = rotation;
     }
-
-    public String getFLEET_NAME()
-    {
-        return FLEET_NAME;
+	
+	public String getShift() {
+		return shift;
     }
-
-    public void setFLEET_NAME( String FLEET_NAME )
-    {
-        this.FLEET_NAME = FLEET_NAME;
+	
+	public void setShift(String shift) {
+		this.shift = shift;
     }
-
-    public String getROTATION()
-    {
-        return ROTATION;
+	
+	public String getAuditType() {
+		return auditType;
     }
-
-    public void setROTATION( String ROTATION )
-    {
-        this.ROTATION = ROTATION;
+	
+	public void setAuditType(String auditType) {
+		this.auditType = auditType;
     }
-
-    public String getSHIFT()
-    {
-        return SHIFT;
+	
+	public String getUser() {
+		return user;
     }
-
-    public void setSHIFT( String SHIFT )
-    {
-        this.SHIFT = SHIFT;
+	
+	public void setUser(String user) {
+		this.user = user;
     }
-
-    public String getAUDIT_TYPE()
-    {
-        return AUDIT_TYPE;
+	
+	public String getDate() {
+		return date;
     }
-
-    public void setAUDIT_TYPE( String AUDIT_TYPE )
-    {
-        this.AUDIT_TYPE = AUDIT_TYPE;
+	
+	public void setDate(String date) {
+		this.date = date;
     }
-
-    public String getUSER()
-    {
-        return USER;
+	
+	public String getTime() {
+		return time;
     }
-
-    public void setUSER( String USER )
-    {
-        this.USER = USER;
+	
+	public void setTime(String time) {
+		this.time = time;
     }
-
-    public String getDATE()
-    {
-        return DATE;
+	
+	public String getDatavan() {
+		return datavan;
     }
-
-    public void setDATE( String DATE )
-    {
-        this.DATE = DATE;
+	
+	public void setDatavan(String datavan) {
+		this.datavan = datavan;
     }
-
-    public String getTIME()
-    {
-        return TIME;
+	
+	public String getBaseStation() {
+		return baseStation;
     }
-
-    public void setTIME( String TIME )
-    {
-        this.TIME = TIME;
+	
+	public void setBaseStation(String baseStation) {
+		this.baseStation = baseStation;
     }
-
-    public String getDATAVAN()
-    {
-        return DATAVAN;
+	
+	public String getRepeater() {
+		return repeater;
     }
-
-    public void setDATAVAN( String DATAVAN )
-    {
-        this.DATAVAN = DATAVAN;
+	
+	public void setRepeater(String repeater) {
+		this.repeater = repeater;
     }
-
-    public String getBASE_STATION()
-    {
-        return BASE_STATION;
+	
+	public String getSpareBatteries() {
+		return spareBatteries;
     }
-
-    public void setBASE_STATION( String BASE_STATION )
-    {
-        this.BASE_STATION = BASE_STATION;
+	
+	public void setSpareBatteries(String spareBatteries) {
+		this.spareBatteries = spareBatteries;
     }
-
-    public String getREPEATER()
-    {
-        return REPEATER;
+	
+	public String getStation() {
+		return station;
     }
-
-    public void setREPEATER( String REPEATER )
-    {
-        this.REPEATER = REPEATER;
+	
+	public void setStation(String station) {
+		this.station = station;
     }
-
-    public String getSPARE_BATTERIES()
-    {
-        return SPARE_BATTERIES;
+	
+	public ArrayList<String> getDamageSensorsList() {
+		return damageSensorsList;
     }
-
-    public void setSPARE_BATTERIES( String SPARE_BATTERIES )
-    {
-        this.SPARE_BATTERIES = SPARE_BATTERIES;
+	
+	public void setDamageSensorsList(ArrayList<String> damageSensorsList) {
+		this.damageSensorsList = damageSensorsList;
     }
-
-    public ArrayList<String> getDAMAGE_SENSOR_LIST()
-    {
-        return DAMAGE_SENSOR_LIST;
+	
+	public ArrayList<String> getSpareSensorsList() {
+		return spareSensorsList;
     }
-
-    public void setDAMAGE_SENSOR_LIST( ArrayList<String> DAMAGE_SENSOR_LIST )
-    {
-        this.DAMAGE_SENSOR_LIST = DAMAGE_SENSOR_LIST;
+	
+	public void setSpareSensorsList(ArrayList<String> spareSensorsList) {
+		this.spareSensorsList = spareSensorsList;
     }
-
-    public ArrayList<String> getSPARE_SENSOR_LIST()
-    {
-        return SPARE_SENSOR_LIST;
+	
+	public ArrayList<Pump_Audit> getPumpArrayList() {
+		return pumpArrayList;
     }
-
-    public void setSPARE_SENSOR_LIST( ArrayList<String> SPARE_SENSOR_LIST )
-    {
-        this.SPARE_SENSOR_LIST = SPARE_SENSOR_LIST;
+	
+	public void setPumpArrayList(ArrayList<Pump_Audit> pumpArrayList) {
+		this.pumpArrayList = pumpArrayList;
     }
-
-    @Override
-    public String toString()
-    {
-        return "Audit{" + "LOCATION=" + LOCATION + ", DISTRICT_NAME=" + DISTRICT_NAME + ", FLEET_NAME=" + FLEET_NAME + ", ROTATION=" + ROTATION + ", SHIFT=" + SHIFT + ", AUDIT_TYPE=" + AUDIT_TYPE + ", USER=" + USER + ", DATE=" + DATE + ", TIME=" + TIME + ", DATAVAN=" + DATAVAN + ", BASE_STATION=" + BASE_STATION + ", REPEATER=" + REPEATER + ", SPARE_BATTERIES=" + SPARE_BATTERIES + ", DAMAGE_SENSOR_LIST=" + DAMAGE_SENSOR_LIST.toString().toUpperCase().replaceAll("[^a-zA-Z0-9,]" , "").replaceAll("\\s+" , "") + ", SPARE_SENSOR_LIST=" + SPARE_SENSOR_LIST.toString().toUpperCase().replaceAll("[^a-zA-Z0-9,]" , "").replaceAll("\\s+" , "") + '}';
-    }
-
+	
 }
