@@ -45,6 +45,9 @@ public class StartUp extends AppCompatActivity implements View.OnClickListener {
         password = findViewById(R.id.PasswordEditText);
         login = findViewById(R.id.LoginButton);
         login.setOnClickListener(this);
+        FirebaseHelper firebaseHelper = new FirebaseHelper();
+        firebaseHelper.insert(readExcel.getPumpArrayList().get(5));
+        
     
     }
 
